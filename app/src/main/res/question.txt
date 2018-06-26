@@ -1,0 +1,22 @@
+E-Food system - Customers, ADMIN, Restaurant Manager
+
+CUSTOMER: create acct, Check current Menu, Place Order for food, Pay for Ordered food
+
+ADMIN: Add Managers as user, Delete users, Check Food Availability, Generate reports
+
+MANAGER: Check Customer's order (Read Only), Generate report
+
+
+[User] id, username, role, fullname, companyID, password
+[Logins] id, loginID, timeIn, timeOut
+[Customer] id, emailAdd, password => User
+[Food] id, name, price, description, ingredients, immageURL
+=> default Food Image - stored locally
+[OrderList] id, orderID, foodID
+[Order] id, customerID, price, discount, amountPaid,
+
+//Todo:
+SQlite DB
+Room to manage
+Test CRUD on all scenarios for each actors (as listed above) with simple UI
+Perfect the UI; customer puts password only when they want to buy

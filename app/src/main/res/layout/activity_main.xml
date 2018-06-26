@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.access_pc.e_food.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rel_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0">
+
+                        <ImageView
+                            android:id="@+id/rel_image"
+                            android:background="@drawable/table"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:id="@+id/tableLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp">
+
+                            <RelativeLayout
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/ll_buttonmenu"
+                                android:background="@color/theme_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:clickable="true">
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:background="@drawable/menuicon"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerInParent="true"
+                                    android:clickable="true"/>
+
+                                <TextView
+                                    android:textSize="@dimen/hometextsize"
+                                    android:textColor="#fff"
+                                    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                                    android:id="@+id/btn_menu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/menu"
+                                    android:paddingStart="3dp"
+                                    android:layout_toEndOf="@+id/imageView2"
+                                    android:layout_margin="10dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:id="@+id/ll_buttonbook"
+                                android:background="@color/theme_torquise"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0">
+
+                                <ImageView
+                                    android:id="@+id/img_ordericon"
+                                    android:background="@drawable/orderdeailicon"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_margin="10dp" />
+
+                                <TextView
+                                    android:textSize="@dimen/hometextsize"
+                                    android:textColor="#fff"
+                                    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                                    android:id="@+id/btn_booktable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/booktable"
+                                    android:paddingStart="3dp"
+                                    android:layout_toEndOf="@+id/img_ordericon" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rel_location"
+                            android:background="@drawable/location_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_below="@+id/tableLayout"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginEnd="7dp">
+
+                            <RelativeLayout
+                                android:gravity="center"
+                                android:id="@+id/rel_location_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="2dp">
+
+                                <ImageView
+                                    android:id="@+id/img_loc_icon"
+                                    android:background="@drawable/map_icon"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center_vertical" />
+
+                                <TextView
+                                    android:textSize="20dp"
+                                    android:layout_toEndOf="@+id/img_loc_icon"
+                                    android:textColor="@color/theme_torquise"
+                                    android:id="@+id/txt_location"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/location"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_gravity="center_vertical" />
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/img_border"
+                                android:background="@drawable/border"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_below="@+id/rel_location_title"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginEnd="30dp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rel_location_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_below="@+id/img_border">
+
+                                <TextView
+                                    android:textSize="@dimen/hometextsize"
+                                    android:textColor="#000"
+                                    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                                    android:id="@+id/txt_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:lines="3" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_below="@+id/rel_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <!-- <RelativeLayout
+         android:id="@+id/rel_bottom"
+         android:background="@color/theme_torquise"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true">
+         <LinearLayout
+             android:id="@+id/ll_offers"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="3dp"
+             android:layout_marginBottom="3dp"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true">
+             <Button
+                 android:textSize="@dimen/bottomMenutextsize" android:textColor="#fff" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/btn_offer" android:background="@drawable/offer_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offers" />
+         </LinearLayout>
+
+
+         <LinearLayout
+             android:id="@+id/ll_notes"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="3dp"
+             android:layout_marginBottom="3dp"
+             android:layout_centerVertical="true"
+             android:layout_toEndOf="@+id/ll_offers">
+             <Button android:textSize="@dimen/bottomMenutextsize" android:textColor="#fff" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/btn_notes" android:background="@drawable/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notes" />
+         </LinearLayout>
+         <LinearLayout android:id="@+id/ll_aboutus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" android:layout_centerVertical="true" android:layout_toEndOf="@+id/ll_notes">
+             <Button android:textSize="@dimen/bottomMenutextsize" android:textColor="#fff" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/btn_aboutus" android:background="@drawable/aboutus_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/aboutus" android:lines="1" />
+         </LinearLayout>
+         <LinearLayout android:id="@+id/ll_map" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" android:layout_centerVertical="true" android:layout_toStartOf="@+id/ll_offers">
+             <Button android:textSize="@dimen/bottomMenutextsize" android:textColor="#fff" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/btn_map" android:background="@drawable/map_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/map" />
+         </LinearLayout>
+         <LinearLayout android:id="@+id/ll_gallery" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" android:layout_centerVertical="true" android:layout_toStartOf="@+id/ll_map">
+             <Button android:textSize="@dimen/bottomMenutextsize" android:textColor="#fff" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/btn_gallery" android:background="@drawable/gallery_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gallery" />
+         </LinearLayout>
+     </RelativeLayout>-->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation"
+        app:layout_behavior="com.example.access_pc.e_food.BottomNavigationBehavior" />
+
+</android.support.constraint.ConstraintLayout>
